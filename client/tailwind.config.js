@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage:{
+        'akane': "url('./src/assets/akane.jpg')"
+      }
+    },
   },
   plugins: [],
 }

@@ -28,8 +28,8 @@ const Register = () => {
       .min(3, "Username must be at least 3 characters")
       .max(20, "Username must be 20 characters or less")
       .required("Username is required"),
-    password: Yup.string()
-      .min(8, "Password must be at least 3 characters")
+    password: Yup.string()  
+      .min(8, "Password must be at least 8 characters")
       .max(20, "Password must be 20 characters or less")
       .required("Password is required"),
     confirmPassword: Yup.string()
@@ -89,9 +89,17 @@ const Register = () => {
     }
   };
 
+  const glass = {
+    backdropFilter: 'blur(10px)',
+    background: 'rgba(255, 255, 255, 0.2)',
+    borderRadius: '1rem',
+    border: '1px solid rgba(255, 255, 255, 0.3)',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+  };
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <div className="w-full max-w-md p-8 space-y-6 bg-white rounded shadow-md">
+    <div className="flex flex-col items-center justify-center min-h-screen  bg-akane bg-cover">
+      <div style={glass} className="w-full max-w-md p-8 space-y-6 bg-white rounded shadow-md">
         <h1 className="text-2xl font-bold text-center">Register</h1>
         <Formik
           initialValues={initialRegisterValues}
