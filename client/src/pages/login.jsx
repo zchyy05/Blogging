@@ -43,9 +43,18 @@ const Login = () => {
     }
   };
 
+  const glass = {
+    backdropFilter: 'blur(10px)',
+    background: 'rgba(255, 255, 255, 0.2)',
+    borderRadius: '1rem',
+    border: '1px solid rgba(255, 255, 255, 0.3)',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+  };
+
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
-      <div className="w-full max-w-md p-8 space-y-6 bg-white rounded shadow-md">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-akane bg-cover">
+      <div style={glass} className="w-full max-w-md p-8 space-y-6 bg-white rounded shadow-md">
         <h1 className="text-2xl font-bold text-center">Login</h1>
         <Formik
           initialValues={initialValues}
@@ -94,7 +103,7 @@ const Login = () => {
               </div>
               <button
                 type="submit"
-                className="w-full py-2 mt-4 font-semibold text-white bg-blue-600 rounded hover:bg-blue-700"
+                className="w-full py-2 mt-4 font-semibold text-white bg-green-400 rounded hover:bg-green-500"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? "Logging in..." : "Login"}
